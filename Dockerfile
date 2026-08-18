@@ -32,5 +32,5 @@ WORKDIR     /home/container
 
 STOPSIGNAL SIGINT
 
-COPY        --chown=root:root --chmod=755 ./../entrypoint.sh /entrypoint.sh
+COPY        --chown=root:root --chmod=755 ./entrypoint.sh /entrypoint.sh
 ENTRYPOINT    ["/usr/bin/tini", "-g", "--", "/entrypoint.sh"]
